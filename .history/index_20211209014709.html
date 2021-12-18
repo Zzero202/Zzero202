@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Toupee Shop</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+    footer{
+      display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			bottom: 0;
+			cursor: pointer;
+      width: 100%;
+    }
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 180px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+		.firstsection {
+			background-color: green;
+			height: 400px;
+		}
+
+		.secondsection {
+			background-color: blue;
+			height: 400px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+		}
+
+		.center {
+			text-align: center;
+     
+text-align: center;
+		}
+
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  margin: 15px;
+  
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+}
+.card img{
+  width: 350px !important;
+  height: 400px !important;
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 5px;
+}
+.container {
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f9fafc;
+}
+
+/*
+Payment Information card
+*/
+.details_card {
+  width: 700px;
+  height: 400px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/*
+Order Summary Card
+*/
+.summary_card {
+  background-color: #fff;
+  width: 350px;
+  height: 400px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/*
+Order Card Item Card
+*/
+.card_item {
+  display: flex;
+  position: relative;
+  margin: 10px 0;
+}
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.card_item .product_img img {
+  height: 80px;
+  margin-right: 20px;
+  width: 70px;
+  border-radius: 5px;
+}
+
+.product_info h1 {
+  font-size: 20px;
+  color: #1e212d;
+  margin: 5px 0;
+}
+
+.product_info p {
+  color: #a1a1a1;
+  font-size: 14px;
+}
+.product_rate_info {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*
+cart item + & -
+*/
+.pqt {
+  font-size: 20px;
+  line-height: 30px;
+  width: 30px;
+  text-align: center;
+}
+
+.pqt-plus,
+.pqt-minus {
+  background: #fcfcfc;
+  border: none;
+  font-size: 20px;
+  height: 100%;
+  padding: 0 15px;
+}
+.pqt-plus:hover,
+.pqt-minus:hover {
+  background: #53b5aa;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pqt-plus {
+  line-height: 30px;
+}
+
+.pqt-minus {
+  line-height: 30px;
+}
+/*
+Order price & total
+*/
+.order_price,
+.order_service,
+.order_total {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 10px;
+}
+.order_price p,
+.order_service p {
+  color: #a1a1a1;
+}
+
+.order_total p {
+  font-weight: 600;
+}
+
+/*
+Payment Information all input
+*/
+
+.payment_details input {
+  outline: 0;
+  background: #f2f2f2;
+  border-radius: 4px;
+  width: 100%;
+  border: 0;
+  caret-color: #4f5d7e;
+  margin: 10px 15px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.first_lastName,
+.shipping_card,
+.address {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.new_card {
+  width: 100%;
+  height: 100px;
+  border: 2px solid #53b5aa;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.add_savedcard {
+  width: 100%;
+  height: 100px;
+  border: 2px solid #a1a1a1;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+/*
+Procced Payment button
+*/
+.proced_payment a {
+  padding: 10px 20px;
+  width: 200px;
+  border: 2px solid #f5f5f5;
+  background-color: #53b5aa;
+  color: #000;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "logo.png">
+			</div>
+			<li><a href="#shop">Wigs Shop</a></li>
+
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+
+<div class="products center">
+  <div class="card">
+    <img src="img/1.jpg"   style="width:100%">
+    <h1>Tall Black wig(natural)</h1>
+    <p class="price">$59.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src="img/2.jpg">
+    <h1>Red Short wig (natural)</h1>
+    <p class="price">$77</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src="img/3.jpg"   style="width:100%">
+    <h1>Curly Tall wig</h1>
+    <p class="price">$33</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src="img/4.jpg"   style="width:100%">
+    <h1>Silk Tall wig</h1>
+    <p class="price">$87.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src="img/5.jpg"   style="width:100%">
+    <h1>Fire Red wig</h1>
+    <p class="price">$199.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src="img/6.jpg"   style="width:100%">
+    <h1>Golden wig(natural)</h1>
+    <p class="price">$19.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src=" img/7.jpg"   style="width:100%">
+    <h1>Curly Short Brown wig</h1>
+    <p class="price">$100.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src=" img/8.jpg"   style="width:100%">
+    <h1>natural  black wig </h1>
+    <p class="price">$66.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src=" img/9.jpg"   style="width:100%">
+    <h1>black wig </h1>
+    <p class="price">$55.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src=" img/10.jpg"   style="width:100%">
+    <h1>golden wig</h1>
+    <p class="price">$44.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src=" img/11.jpg"   style="width:100%">
+    <h1>black natural wig</h1>
+    <p class="price">$15.99</p>
+     
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="card">
+    <img src=" img/12.jpg"   style="width:100%">
+    <h1>red wig </h1>
+    <p class="price">$33.99</p>
+     
+    <p><button>Add to Cart</button></p>
+
+</div>
+
+
+
+<div class="container">
+  <div class="payment_details">
+    <h1>Payment Information</h1>
+    <div class="details_card">
+      <div class="name_address">
+        <div class="first_lastName">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div class="address">
+          <input type="text" onkeyup="change()" id="put" placeholder="Address" />
+          <input type="number" placeholder="Pincode" />
+          <input type="text" placeholder="Country" />
+        </div>
+      </div>
+      <h1>Shipping Details</h1>
+      <div class="shipping_card">
+        <div class="new_card">
+          <h4>Same as personal</h4>
+          <p id="output">Bharat House Bombay Samachar Road</p>
+          <p>400001</p>
+        </div>
+        <div class="add_savedcard">
+          <h4>Saved Address</h4>
+          <p>Lokhandwala Complex, Andheri (west)</p>
+          <p>400053</p>
+        </div>
+      </div>
+      <div class="proced_payment">
+        <a href="">Procced to payment</a>
+      </div>
+    </div>
+  </div>
+  <div class="order_summary">
+    <h1>Order Summary</h1>
+    <div class="summary_card">
+      <div class="card_item">
+        <div class="product_img">
+          <img src=https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=643&q=80" alt="" />
+        </div>
+        <div class="product_info">
+          <h1>Nike Shoes</h1>
+          <p>Lorem Ipsum is simply dummy text.</p>
+          <div class="close-btn">
+            <i class="fa fa-close"></i>
+          </div>
+          <div class="product_rate_info">
+            <h1>$ 200</h1>
+            <span class="pqt-minus">-</span>
+            <span class="pqt">1</span>
+            <span class="pqt-plus">+</span>
+          </div>
+        </div>
+      </div>
+      <div class="card_item">
+        <div class="product_img">
+          <img src="https://images.unsplash.com/photo-1543512214-318c7553f230?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="" />
+        </div>
+        <div class="product_info">
+          <h1>Amazon Prime</h1>
+          <p>Lorem Ipsum is simply dummy text.</p>
+          <div class="close-btn">
+            <i class="fa fa-close"></i>
+          </div>
+          <div class="product_rate_info">
+            <h1>$ 160</h1>
+            <span class="pqt-minus">-</span>
+            <span class="pqt">1</span>
+            <span class="pqt-plus">+</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_price">
+        <p>Order summary</p>
+        <h4>$400</h4>
+      </div>
+      <div class="order_service">
+        <p>Additional Service</p>
+        <h4>$10</h4>
+      </div>
+      <div class="order_total">
+        <p>Total Amount</p>
+        <h4>$370</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="table-pic">
+  <table>
+    <thead>
+      <tr>
+        <th>title</th>
+        <th>price</th>
+        <th>image</th>
+        <th>Add</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tall Black wig(natural)</td>
+        <td>$59.99</td>
+        <td><img src="img/1.jpg" width="100" alt=""></td>
+        <td><button>Add to Cart</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<footer>
+  <a >	Copyright ©-All rights are reserved</a>
+</footer>
+
+</body>
+
+</html>
+<style>
+  table{
+    border:;
+  }
+  table tr td,th{
+    border: 1px solid black;
+  }
+</style>
